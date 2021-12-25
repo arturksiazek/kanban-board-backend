@@ -13,6 +13,14 @@ module.exports = {
         },
         'controllers.auth.logout': {
             class: 'controllers/Auth/LogoutController'
+        },
+        'controllers.board.show': {
+            class: 'controllers/Board/ShowController',
+            arguments: ['@repositories.board']
+        },
+        'controllers.board.create': {
+            class: 'controllers/Board/CreateController',
+            arguments: ['@repositories.board']
         }
     }
 };

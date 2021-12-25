@@ -1,6 +1,6 @@
 const { StatusCodes: HTTP } = require('http-status-codes');
 
-class IndexController {
+class ShowController {
     /**
      * @param {BoardRepository} boardRepository
      */
@@ -8,10 +8,10 @@ class IndexController {
         this.boardRepository = boardRepository;
     }
     async invoke(req, res) {
-        const tasks = await this.boardRepository.findAll();
+        const boards = await this.boardRepository.findAll();
 
-        return res.status(HTTP.OK).send(tasks);
+        return res.status(HTTP.OK).send(boards);
     }
 }
 
-module.exports = IndexController;
+module.exports = ShowController;
