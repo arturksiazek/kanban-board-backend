@@ -1,0 +1,36 @@
+{
+    "name": "kanban-board-backend",
+    "version": "1.0.0",
+    "main": "src/index.js",
+    "repository": "https://github.com/arturksiazek/kanban-board-backend.git",
+    "author": "Artur Książek <kontakt@arturksiazek.pl>",
+    "license": "MIT",
+    "scripts": {
+        "db-undo-migrate": "./node_modules/.bin/sequelize db:migrate:undo:all",
+        "db-migrate": "./node_modules/.bin/sequelize db:migrate",
+        "db-seed": "./node_modules/.bin/sequelize db:seed:all",
+        "db-drop": "./node_modules/.bin/sequelize db:drop",
+        "db-create": "./node_modules/.bin/sequelize db:create",
+        "db-setup": "npm run db-undo-migrate && npm run db-migrate && npm run db-seed",
+        "db-setup-fresh": "npm run db-drop && npm run db-create && npm run db-migrate && npm run db-seed",
+        "dev": "NODE_ENV=development nodemon ./src/bin/server.js"
+    },
+    "dependencies": {
+        "bcrypt": "^5.0.1",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "express-session": "^1.17.2",
+        "http-status-codes": "^2.1.4",
+        "mysql2": "^2.2.5",
+        "node-dependency-injection": "^2.7.0",
+        "sequelize": "^6.6.2",
+        "sequelize-cli": "^6.2.0"
+    },
+    "devDependencies": {
+        "eslint": "^7.28.0",
+        "nodemon": "^2.0.11",
+        "prettier": "2.2.1"
+    }
+}
