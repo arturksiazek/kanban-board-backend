@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
     up: async (queryInterface, Sequelize) => {
-        await queryInterface.createTable('Tasks', {
+        await queryInterface.createTable('Projects', {
             id: {
                 primaryKey: true,
                 type: Sequelize.UUID,
@@ -11,24 +11,7 @@ module.exports = {
                 allowNull: false,
                 type: Sequelize.STRING
             },
-            slug: {
-                allowNull: false,
-                type: Sequelize.STRING
-            },
-            description: {
-                allowNull: false,
-                type: Sequelize.STRING
-            },
             boardId: {
-                allowNull: false,
-                type: Sequelize.UUID,
-                defaultValue: Sequelize.UUIDV4
-            },
-            index: {
-                allowNull: false,
-                type: Sequelize.INTEGER
-            },
-            projectId: {
                 allowNull: false,
                 type: Sequelize.UUID,
                 defaultValue: Sequelize.UUIDV4
@@ -46,6 +29,6 @@ module.exports = {
         });
     },
     down: async (queryInterface, Sequelize) => {
-        await queryInterface.dropTable('Tasks');
+        await queryInterface.dropTable('Projects');
     }
 };

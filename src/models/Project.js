@@ -2,8 +2,8 @@
 const { Model } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
-    class Board extends Model {}
-    Board.init(
+    class Project extends Model {}
+    Project.init(
         {
             id: {
                 primaryKey: true,
@@ -14,30 +14,26 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
                 type: DataTypes.STRING
             },
-            slug: {
-                allowNull: true,
-                type: DataTypes.STRING
+            boardId: {
+                allowNull: false,
+                type: DataTypes.UUID,
+                defaultValue: DataTypes.UUIDV4
             }
         },
         {
-            modelName: 'Board',
+            modelName: 'Project',
             sequelize
         }
     );
 
-    Board.associate = ({ Task, Project }) => {
-        Board.hasMany(Task, {
+    Project.associate = function ({ Task }) {
+        Project.hasMany(Task, {
             as: 'tasks',
-            foreignKey: 'boardId'
+            foreignKey: 'projectId'
         });
 
-        Board.hasMany(Project, {
-            as: 'projects',
-            foreignKey: 'boardId'
-        });
-
-        return Board;
+        return Project;
     };
 
-    return Board;
+    return Project;
 };

@@ -23,6 +23,11 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.UUID,
                 defaultValue: DataTypes.UUIDV4
             },
+            projectId: {
+                allowNull: false,
+                type: DataTypes.UUID,
+                defaultValue: DataTypes.UUIDV4
+            },
             index: {
                 allowNull: false,
                 type: DataTypes.INTEGER
@@ -33,6 +38,14 @@ module.exports = (sequelize, DataTypes) => {
             sequelize
         }
     );
+
+    Task.associate = ({ Project }) => {
+        Task.belongsTo(Project, {
+            as: 'project'
+        });
+
+        return Task;
+    };
 
     return Task;
 };

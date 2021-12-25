@@ -13,7 +13,9 @@ class ShowController {
             where: {
                 slug
             },
-            include: [{ association: 'tasks' }]
+            include: [
+                { association: 'tasks', include: [{ association: 'project' }] }
+            ]
         });
 
         return res.status(HTTP.OK).send(board);
