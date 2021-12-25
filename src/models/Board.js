@@ -25,5 +25,14 @@ module.exports = (sequelize, DataTypes) => {
         }
     );
 
+    Board.associate = ({ Task }) => {
+        Board.hasMany(Task, {
+            as: 'tasks',
+            foreignKey: 'boardId'
+        });
+
+        return Board;
+    };
+
     return Board;
 };

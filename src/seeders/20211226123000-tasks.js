@@ -11,8 +11,8 @@ module.exports = {
                 slug: 'ethiopian-sidamo',
                 description:
                     'Sidamo is one of the most prolific growing regions in Ethiopia, putting out large volumes of consistently great coffee each year.',
-                boardId: 1,
-                referenceId: 1,
+                boardId: uuidv4(),
+                index: 1,
                 projectId: 1
             }
         ]);

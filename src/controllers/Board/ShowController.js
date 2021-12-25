@@ -8,9 +8,15 @@ class ShowController {
         this.boardRepository = boardRepository;
     }
     async invoke(req, res) {
-        const boards = await this.boardRepository.findAll();
+        const { slug } = req.params;
+        const board = await this.boardRepository.findOne({
+            where: {
+                slug
+            },
+            include: [{ association: 'tasks' }]
+        });
 
-        return res.status(HTTP.OK).send(boards);
+        return res.status(HTTP.OK).send(board);
     }
 }
 

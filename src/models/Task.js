@@ -20,9 +20,10 @@ module.exports = (sequelize, DataTypes) => {
             },
             boardId: {
                 allowNull: false,
-                type: DataTypes.INTEGER
+                type: DataTypes.UUID,
+                defaultValue: DataTypes.UUIDV4
             },
-            referenceId: {
+            index: {
                 allowNull: false,
                 type: DataTypes.INTEGER
             }

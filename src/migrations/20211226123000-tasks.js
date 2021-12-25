@@ -21,9 +21,10 @@ module.exports = {
             },
             boardId: {
                 allowNull: false,
-                type: Sequelize.INTEGER
+                type: Sequelize.UUID,
+                defaultValue: Sequelize.UUIDV4
             },
-            referenceId: {
+            index: {
                 allowNull: false,
                 type: Sequelize.INTEGER
             },
