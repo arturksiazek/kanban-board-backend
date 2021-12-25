@@ -10,7 +10,7 @@ class CreateController {
 
     async invoke(req, res) {
         const {
-            body: { title, description, boardId, referenceId }
+            body: { title, description, boardId, referenceId, projectId }
         } = req;
 
         const task = this.taskRepository.create({
@@ -18,7 +18,8 @@ class CreateController {
             title,
             description,
             boardId,
-            referenceId
+            referenceId,
+            projectId
         });
 
         return res.status(HTTP.CREATED).send(task);

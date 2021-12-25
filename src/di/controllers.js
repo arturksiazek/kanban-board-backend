@@ -1,11 +1,11 @@
 module.exports = {
     services: {
-        'controllers.product.index': {
-            class: 'controllers/Product/IndexController',
+        'controllers.task.index': {
+            class: 'controllers/Task/IndexController',
             arguments: ['@repositories.product']
         },
-        'controllers.product.create': {
-            class: 'controllers/Product/CreateController',
+        'controllers.task.create': {
+            class: 'controllers/Task/CreateController',
             arguments: ['@repositories.product']
         },
         'controllers.auth.login': {

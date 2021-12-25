@@ -1,6 +1,6 @@
 module.exports = {
     services: {
-        'repositories.product': {
+        'repositories.task': {
             class: 'repositories/TaskRepository'
         }
     }

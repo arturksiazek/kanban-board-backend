@@ -11,6 +11,10 @@ module.exports = {
                 allowNull: false,
                 type: Sequelize.STRING
             },
+            slug: {
+                allowNull: false,
+                type: Sequelize.STRING
+            },
             description: {
                 allowNull: false,
                 type: Sequelize.STRING
@@ -20,6 +24,10 @@ module.exports = {
                 type: Sequelize.INTEGER
             },
             referenceId: {
+                allowNull: false,
+                type: Sequelize.INTEGER
+            },
+            projectId: {
                 allowNull: false,
                 type: Sequelize.INTEGER
             },
