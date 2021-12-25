@@ -1,4 +1,4 @@
-# Coffeecommerce backend
+# Kabnban-board backend
 
 NodeJS/Express e-commerce REST API app for demonstration purposes
 
