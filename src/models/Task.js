@@ -10,7 +10,11 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.UUID,
                 defaultValue: DataTypes.UUIDV4
             },
-            title: {
+            name: {
+                allowNull: false,
+                type: DataTypes.STRING
+            },
+            slug: {
                 allowNull: false,
                 type: DataTypes.STRING
             },
@@ -18,12 +22,12 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: true,
                 type: DataTypes.STRING
             },
-            boardId: {
+            projectId: {
                 allowNull: false,
                 type: DataTypes.UUID,
                 defaultValue: DataTypes.UUIDV4
             },
-            projectId: {
+            listId: {
                 allowNull: false,
                 type: DataTypes.UUID,
                 defaultValue: DataTypes.UUIDV4
@@ -39,9 +43,13 @@ module.exports = (sequelize, DataTypes) => {
         }
     );
 
-    Task.associate = ({ Project }) => {
+    Task.associate = ({ Project, List }) => {
         Task.belongsTo(Project, {
             as: 'project'
+        });
+
+        Task.belongsTo(List, {
+            as: 'list'
         });
 
         return Task;

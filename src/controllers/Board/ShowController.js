@@ -7,6 +7,7 @@ class ShowController {
     constructor(boardRepository) {
         this.boardRepository = boardRepository;
     }
+
     async invoke(req, res) {
         const { slug } = req.params;
         const board = await this.boardRepository.findOne({
@@ -14,7 +15,15 @@ class ShowController {
                 slug
             },
             include: [
-                { association: 'tasks', include: [{ association: 'project' }] }
+                {
+                    association: 'lists',
+                    include: [
+                        {
+                            association: 'tasks',
+                            include: [{ association: 'project' }]
+                        }
+                    ]
+                }
             ]
         });
 

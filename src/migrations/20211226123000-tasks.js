@@ -7,7 +7,7 @@ module.exports = {
                 type: Sequelize.UUID,
                 defaultValue: Sequelize.UUIDV4
             },
-            title: {
+            name: {
                 allowNull: false,
                 type: Sequelize.STRING
             },
@@ -19,16 +19,16 @@ module.exports = {
                 allowNull: false,
                 type: Sequelize.STRING
             },
-            boardId: {
-                allowNull: false,
-                type: Sequelize.UUID,
-                defaultValue: Sequelize.UUIDV4
-            },
             index: {
                 allowNull: false,
                 type: Sequelize.INTEGER
             },
             projectId: {
+                allowNull: false,
+                type: Sequelize.UUID,
+                defaultValue: Sequelize.UUIDV4
+            },
+            listId: {
                 allowNull: false,
                 type: Sequelize.UUID,
                 defaultValue: Sequelize.UUIDV4

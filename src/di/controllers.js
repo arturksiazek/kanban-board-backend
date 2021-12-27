@@ -1,7 +1,7 @@
 module.exports = {
     services: {
-        'controllers.task.index': {
-            class: 'controllers/Task/IndexController',
+        'controllers.task.show': {
+            class: 'controllers/Task/ShowController',
             arguments: ['@repositories.task']
         },
         'controllers.task.create': {

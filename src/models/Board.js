@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.UUID,
                 defaultValue: DataTypes.UUIDV4
             },
-            title: {
+            name: {
                 allowNull: false,
                 type: DataTypes.STRING
             },
@@ -25,14 +25,14 @@ module.exports = (sequelize, DataTypes) => {
         }
     );
 
-    Board.associate = ({ Task, Project }) => {
-        Board.hasMany(Task, {
-            as: 'tasks',
+    Board.associate = ({ Project, List }) => {
+        Board.hasMany(Project, {
+            as: 'projects',
             foreignKey: 'boardId'
         });
 
-        Board.hasMany(Project, {
-            as: 'projects',
+        Board.hasMany(List, {
+            as: 'lists',
             foreignKey: 'boardId'
         });
 

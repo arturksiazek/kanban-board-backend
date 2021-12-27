@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 
 module.exports = di => {
-    const indexController = di.get('controllers.task.index');
+    const showController = di.get('controllers.task.show');
     const createController = di.get('controllers.task.create');
 
-    router.get('/', (...args) => indexController.invoke(...args));
+    router.get('/', (...args) => showController.invoke(...args));
     router.post('/', (...args) => createController.invoke(...args));
 
     return router;
