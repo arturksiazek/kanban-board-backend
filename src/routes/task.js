@@ -5,7 +5,7 @@ module.exports = di => {
     const showController = di.get('controllers.task.show');
     const createController = di.get('controllers.task.create');
 
-    router.get('/', (...args) => showController.invoke(...args));
+    router.get('/:slug', (...args) => showController.invoke(...args));
     router.post('/', (...args) => createController.invoke(...args));
 
     return router;

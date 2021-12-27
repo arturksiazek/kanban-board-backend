@@ -13,13 +13,12 @@ class ShowController {
         const task = await this.taskRepository.findOne({
             where: {
                 slug
-            }
-
-            // include: [
-            //     {
-            //         association: 'project'
-            //     }
-            // ]
+            },
+            include: [
+                {
+                    association: 'project'
+                }
+            ]
         });
 
         return res.status(HTTP.OK).send(task);

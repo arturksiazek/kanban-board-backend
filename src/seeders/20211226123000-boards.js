@@ -11,7 +11,8 @@ module.exports = {
             {
                 id: boardId,
                 name: 'General',
-                slug: 'general'
+                slug: 'general',
+                index: 1
             }
         ]);
 
@@ -52,7 +53,8 @@ module.exports = {
             {
                 id: projectId,
                 name: 'Main project',
-                boardId: boardId
+                boardId: boardId,
+                index: 1
             }
         ]);
 
@@ -60,27 +62,32 @@ module.exports = {
             {
                 id: listId,
                 name: 'Ready for development',
-                boardId: boardId
+                boardId: boardId,
+                index: 1
             },
             {
                 id: uuidv4(),
                 name: 'In development',
-                boardId: boardId
+                boardId: boardId,
+                index: 2
             },
             {
                 id: uuidv4(),
                 name: 'Ready for review',
-                boardId: boardId
+                boardId: boardId,
+                index: 3
             },
             {
                 id: uuidv4(),
                 name: 'Ready for deploy',
-                boardId: boardId
+                boardId: boardId,
+                index: 4
             },
             {
                 id: uuidv4(),
                 name: 'Completed',
-                boardId: boardId
+                boardId: boardId,
+                index: 5
             }
         ]);
     },

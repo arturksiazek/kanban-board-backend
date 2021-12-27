@@ -24,7 +24,8 @@ class ShowController {
                         }
                     ]
                 }
-            ]
+            ],
+            order: [['index', 'DESC']]
         });
 
         return res.status(HTTP.OK).send(board);

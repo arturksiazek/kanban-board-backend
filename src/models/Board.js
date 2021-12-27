@@ -17,6 +17,10 @@ module.exports = (sequelize, DataTypes) => {
             slug: {
                 allowNull: true,
                 type: DataTypes.STRING
+            },
+            index: {
+                allowNull: false,
+                type: DataTypes.INTEGER
             }
         },
         {
