@@ -1,4 +1,5 @@
 const { StatusCodes: HTTP } = require('http-status-codes');
+const { List, Task } = require('../../models');
 
 class ShowController {
     /**
@@ -10,6 +11,7 @@ class ShowController {
 
     async invoke(req, res) {
         const { slug } = req.params;
+
         const board = await this.boardRepository.findOne({
             where: {
                 slug
@@ -25,7 +27,15 @@ class ShowController {
                     ]
                 }
             ],
-            order: [['index', 'DESC']]
+            order: [
+                [{ model: List, as: 'lists' }, 'index', 'ASC'],
+                [
+                    { model: List, as: 'lists' },
+                    { model: Task, as: 'tasks' },
+                    'index',
+                    'ASC'
+                ]
+            ]
         });
 
         return res.status(HTTP.OK).send(board);
