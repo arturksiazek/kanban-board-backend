@@ -4,6 +4,10 @@ module.exports = {
             class: 'controllers/Task/ShowController',
             arguments: ['@repositories.task']
         },
+        'controllers.task.update': {
+            class: 'controllers/Task/UpdateController',
+            arguments: ['@repositories.task']
+        },
         'controllers.task.create': {
             class: 'controllers/Task/CreateController',
             arguments: ['@repositories.task']

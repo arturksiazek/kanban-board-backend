@@ -17,6 +17,9 @@ class ShowController {
             include: [
                 {
                     association: 'project'
+                },
+                {
+                    association: 'list'
                 }
             ]
         });
