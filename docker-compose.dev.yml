@@ -2,7 +2,6 @@ version: '3.0'
 
 services:
     db:
-        platform: linux/x86_64
         image: mysql:5.7
         container_name: mysql.kanban-board.docker
         restart: unless-stopped
@@ -16,6 +15,12 @@ services:
             - mysql.kanban-board.docker:/var/lib/mysql
         ports:
             - 127.0.0.1:${DATABASE_PORT}:3306
+        networks:
+            - global
 
 volumes:
     mysql.kanban-board.docker:
+
+networks:
+    global:
+        external: true
