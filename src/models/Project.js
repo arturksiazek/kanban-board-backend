@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
                 type: DataTypes.STRING
             },
+            color: {
+                allowNull: false,
+                type: DataTypes.STRING
+            },
             boardId: {
                 allowNull: false,
                 type: DataTypes.UUID,

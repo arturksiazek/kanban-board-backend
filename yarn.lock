@@ -451,10 +451,10 @@ commander@^2.19.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
 
-commander@^7.0.0:
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-7.2.0.tgz#a36cb57d0b501ce108e4d20559a150a391d97ab7"
-  integrity sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==
+commander@^8.1.0:
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-8.3.0.tgz#4837ea1b2da67b9c616a67afbb0fafee567bca66"
+  integrity sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -1735,13 +1735,13 @@ node-addon-api@^3.1.0:
   resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-3.2.1.tgz#81325e0a2117789c0128dab65e7e38f07ceba161"
   integrity sha512-mmcei9JghVNDYydghQmeDX8KoAm0FAiYyIcUt/N4nhyAipB17pllZQDOJD2fotxABnt4Mdz+dKTO7eftLg4d0A==
 
-node-dependency-injection@^2.7.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/node-dependency-injection/-/node-dependency-injection-2.7.0.tgz#0cf497aabe7b9354f11f952ee7252af1db5ad83b"
-  integrity sha512-/nMuvumOgVgMfU6hGE6bDq/28bQHPVQsm1scvr3CYVGy6+lODCd0zrgoG7dj3XKap8X1ZheFIp1HWJqz+dWMTA==
+node-dependency-injection@^2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/node-dependency-injection/-/node-dependency-injection-2.7.1.tgz#501ae47d875ef8959c8049e42be6ef7b9c0a9ef7"
+  integrity sha512-8Ag6fAU9rBTcF3J4SoMKmAMSmcj1pbiXggDvbK7FU142wfpuJT3deaI3M6zEo8Z9v+gSxPv7TC/nBAIf+67t7w==
   dependencies:
     chalk "^4.1.0"
-    commander "^7.0.0"
+    commander "^8.1.0"
     console.table "^0.10.0"
     js-yaml "^4.0.0"
     validate-npm-package-name "^3.0.0"

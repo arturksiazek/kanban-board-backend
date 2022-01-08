@@ -11,6 +11,10 @@ module.exports = {
                 allowNull: false,
                 type: Sequelize.STRING
             },
+            color: {
+                allowNull: false,
+                type: Sequelize.STRING
+            },
             boardId: {
                 allowNull: false,
                 type: Sequelize.UUID,
